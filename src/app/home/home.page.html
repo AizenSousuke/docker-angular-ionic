@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onClick()" fill="solid" shape="round">
+        Add Card
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-card *ngFor="let card of cards; let i = index" class="ion-padding">
+      <ion-card-content slot="start">
+        {{ card.content }} {{ i }}
+      </ion-card-content>
+      <ion-button (click)="onButtonClick(i)" fill="solid" shape="round" slot="end">
+        Click me
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom,top">
+        <ion-tab-button tab="tab1">
+          <ion-icon name="flash"></ion-icon>
+          <ion-label>Tab One</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="tab2">
+          <ion-icon name="apps"></ion-icon>
+          <ion-label>Tab Two</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="tab3">
+          <ion-icon name="send"></ion-icon>
+          <ion-label>Tab Three</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
